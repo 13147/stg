@@ -15,7 +15,7 @@ namespace stg
     { 
 
         public int x;
-        public int y;               //自機の座標
+        public int y;              
 
 
         private Image CharImg;
@@ -63,7 +63,7 @@ namespace stg
 
                 if ((Keyboard.GetKeyStates(Key.Z) & KeyStates.Down) > 0)
                 {
-                    Shot shot = new Shot();
+                    Shot shot = new Shot(g);
 
                 }
 

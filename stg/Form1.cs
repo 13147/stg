@@ -24,6 +24,9 @@ namespace stg
         public Form1()
         {
             InitializeComponent();
+
+
+
         }
 
        
@@ -31,9 +34,9 @@ namespace stg
         private void Form1_Load(object sender, EventArgs e)
         {
            
-            g = pictureBox1.CreateGraphics();    //グラフィック用オブジェクトを生成
+            g = pictureBox1.CreateGraphics();    
 
-            Timer1.Interval = 20;    //タイマー
+            Timer1.Interval = 20;   
             Timer1.Enabled = true;
 
         }

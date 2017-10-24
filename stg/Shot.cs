@@ -13,20 +13,23 @@ namespace stg
 {
     class Shot
     {
-        private Image ShotImg;
-        
-        public  Shot(Graphics g)    //1回のみ呼ぶ　static使いたいがエラーでる
+        private Image shotImg;
+        private Graphics copyg;
+        private int shotx, shoty;
+
+        public  Shot()    //1回のみ呼ぶ　static使いたいがエラーでる
         {
-            ShotImg = new Bitmap(@"image\shot.png");//要確認
-            //copygの生成
+            shotImg = new Bitmap(@"image\shot.png");//要確認
+            copyg = g;
             //タイマー作成
-            
+           
+
         }
 
         public void S()
         {
-            //y++
-            g.DrawImage(ShotImg, x, y, ShotImg.Width, ShotImg.Height);
+            shoty++;
+            copyg.DrawImage(shotImg, shotx, shoty, shotImg.Width, shotImg.Height);
             //タイマー使用
             //ifでメモリ解放条件はyの座標
         }
