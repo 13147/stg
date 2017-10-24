@@ -22,7 +22,7 @@ namespace stg
 
         public Player(int x1,int y1)
         {
-            CharImg = new Bitmap(@"C:\Users\hosomi\Desktop\SP\char.JPEG");
+            CharImg = new Bitmap(@"image\char.JPEG");
             x =x1;
             y =y1;     
         }
@@ -61,7 +61,11 @@ namespace stg
 
                 }
 
-                
+                if ((Keyboard.GetKeyStates(Key.Z) & KeyStates.Down) > 0)
+                {
+                    Shot shot = new Shot();
+
+                }
 
             g.DrawImage(CharImg, x, y, CharImg.Width, CharImg.Height);
 

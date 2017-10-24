@@ -13,9 +13,9 @@ namespace stg
     public partial class Form1 : Form
     {
         private Player player1 = new Player(0,0);
-        private Player player2 = new Player(50,50);
+        private Player player2 = new Player(50,50);　//newはコンストラクタの中に移動したいがtimer1_tickでエラー
 
-        private Shot shot = new Shot();
+       
 
         public  Graphics g;
 
@@ -30,16 +30,10 @@ namespace stg
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //グラフィック用オブジェクトを生成
-            g = pictureBox1.CreateGraphics();
-
-
-            //画像読み込み
            
-            
+            g = pictureBox1.CreateGraphics();    //グラフィック用オブジェクトを生成
 
-            //タイマー
-            Timer1.Interval = 20;
+            Timer1.Interval = 20;    //タイマー
             Timer1.Enabled = true;
 
         }

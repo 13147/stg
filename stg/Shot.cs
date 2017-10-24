@@ -14,21 +14,21 @@ namespace stg
     class Shot
     {
         private Image ShotImg;
-
-        public Shot()
+        
+        public  Shot(Graphics g)    //1回のみ呼ぶ　static使いたいがエラーでる
         {
-            ShotImg = new Bitmap(@"C:\Users\hosomi\Desktop\SP\shot.png");
+            ShotImg = new Bitmap(@"image\shot.png");//要確認
+            //copygの生成
+            //タイマー作成
             
         }
 
-        public void S(Graphics g)
+        public void S()
         {
-            if ((Keyboard.GetKeyStates(Key.Z) & KeyStates.Down) > 0)
-            {
-                g.DrawImage(ShotImg, x, y, ShotImg.Width, ShotImg.Height);
-
-            }
-
+            //y++
+            g.DrawImage(ShotImg, x, y, ShotImg.Width, ShotImg.Height);
+            //タイマー使用
+            //ifでメモリ解放条件はyの座標
         }
 
     }
